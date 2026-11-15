@@ -7,7 +7,7 @@ what is on every disc, finds files across all of them, and checks with SHA-256
 whether an old disc is still readable.
 
 One portable 32-bit `.exe` with SQLite built in. Runs on **Windows XP SP2 through
-Windows 11**, needs no installer and no runtime.
+Windows 11**, needs no installer and no runtime. Created with Claude Opus 5.5.
 
 <img width="1008" height="691" alt="{E3D2028F-1599-49B0-AE27-20B5E0A8EFB0}" src="https://github.com/user-attachments/assets/587515a9-c9d2-4215-b009-a9c423b4a22e" />
 
