@@ -9,7 +9,8 @@ whether an old disc is still readable.
 One portable 32-bit `.exe` with SQLite built in. Runs on **Windows XP SP2 through
 Windows 11**, needs no installer and no runtime.
 
-![Main window](docs/screenshot-en.png)
+<img width="1008" height="691" alt="{E3D2028F-1599-49B0-AE27-20B5E0A8EFB0}" src="https://github.com/user-attachments/assets/587515a9-c9d2-4215-b009-a9c423b4a22e" />
+
 
 ## Features
 
@@ -31,7 +32,7 @@ Windows 11**, needs no installer and no runtime.
   Cancel works even on a disc stuck at a bad sector, and nothing is written then.
 - **English and Russian UI**, switchable at runtime (File → Language / Язык).
 
-![Disc card](docs/screenshot-card-en.png)
+<img width="479" height="375" alt="{89DC6F55-18B2-4D77-AD6A-2C108B3A45CD}" src="https://github.com/user-attachments/assets/2cfa8033-e00d-4f71-8452-c2d39094add7" />
 
 ## Download
 
