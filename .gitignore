@@ -1,0 +1,5 @@
+build/
+*.exe
+*.db
+backuplist.ini
+reports/
