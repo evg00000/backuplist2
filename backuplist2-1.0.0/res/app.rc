@@ -1,0 +1,82 @@
+#pragma code_page(65001)
+#include <windows.h>
+#include <commctrl.h>
+#include "../src/resource.h"
+
+#ifndef IDC_STATIC
+#define IDC_STATIC -1
+#endif
+
+1 ICON "app.ico"
+1 24 "app.manifest"
+
+IDD_DISC DIALOGEX 0, 0, 320, 216
+STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Disc"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Number:",       IDC_DL_ID,   8,  10,  52, 8
+    EDITTEXT        IDC_D_ID,                     62,   8,  40, 12, ES_NUMBER
+    LTEXT           "Media:",        IDC_DL_KIND, 166,  10,  50, 8
+    COMBOBOX        IDC_D_KIND,                  218,   8,  94, 120, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+
+    LTEXT           "Burned on:",    IDC_DL_WRITTEN,   8,  28,  52, 8
+    EDITTEXT        IDC_D_WRITTEN,                62,  26,  60, 12
+    LTEXT           "Content:",      IDC_DL_CTYPE, 166,  28,  50, 8
+    COMBOBOX        IDC_D_CTYPE,                 218,  26,  94, 120, CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+
+    LTEXT           "Priority:",     IDC_DL_PRIO,   8,  46,  52, 8
+    COMBOBOX        IDC_D_PRIO,                   62,  44,  94, 80, CBS_DROPDOWNLIST | WS_TABSTOP
+    LTEXT           "Brand:",        IDC_DL_BRAND, 166,  46,  50, 8
+    COMBOBOX        IDC_D_BRAND,                 218,  44,  94, 120, CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+
+    LTEXT           "Media ID:",     IDC_DL_MEDIA,   8,  64,  52, 8
+    COMBOBOX        IDC_D_MEDIA,                  62,  62,  94, 120, CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+
+    LTEXT           "Volume label:", IDC_DL_LABEL,   8,  82,  52, 8
+    EDITTEXT        IDC_D_LABEL,                  62,  80,  94, 12, ES_READONLY
+    LTEXT           "Serial:",       IDC_DL_SERIAL, 166,  82,  50, 8
+    EDITTEXT        IDC_D_SERIAL,                218,  80,  94, 12, ES_READONLY
+
+    LTEXT           "Contents:", IDC_DL_CONTENTS, 8, 100, 200, 8
+    EDITTEXT        IDC_D_CONTENTS,                8, 111, 304, 62, ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL | ES_WANTRETURN
+
+    LTEXT           "",              IDC_D_STATUS,  8, 177, 194, 36, SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",            IDOK,        206, 194,  50, 14
+    PUSHBUTTON      "Cancel",        IDCANCEL,    262, 194,  50, 14
+END
+
+IDD_PROGRESS DIALOGEX 0, 0, 300, 92
+STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Scanning"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "",              IDC_P_PHASE,   8,   8, 284, 9
+    LTEXT           "",              IDC_P_FILE,    8,  21, 284, 9, SS_PATHELLIPSIS | SS_NOPREFIX
+    CONTROL         "",              IDC_P_BAR, "msctls_progress32", PBS_SMOOTH | WS_BORDER, 8, 34, 284, 12
+    LTEXT           "",              IDC_P_STATS,   8,  52, 284, 9
+    PUSHBUTTON      "Cancel",        IDCANCEL,    242,  70,  50, 14
+END
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_APP
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904B0"
+    BEGIN
+      VALUE "FileDescription", "Backuplist 2 - optical disc backup catalog"
+      VALUE "FileVersion",     "1.0.0"
+      VALUE "ProductName",     "Backuplist 2"
+      VALUE "ProductVersion",  "1.0.0"
+      VALUE "LegalCopyright",  "Unlicense (public domain)"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1200
+  END
+END
